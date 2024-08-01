@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automata - Powerful Automation Software</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Automata Dashboard</h1>
+    </div>
+    <div class="container">
+        <div class="dashboard-grid">
+            <div class="dashboard-item">
+                <h2>Mouse Automations</h2>
+                <p hx-get="/api/allMacros">Saved Automations</p>
+                <button hx-get="">New Automation</button>
+                <!-- <button hx-get="/api/recordMouse">Recrd Mouse</button> -->
+            </div>
+            <div class="dashboard-item">
+                <h2>Users</h2>
+                <p id="screensize"></p>
+                <button hx-get="/api/getScreenSize" hx-target="#screensize">Get Screen Size</button>
+            </div>
+            <div class="dashboard-item">
+                <h2>Traffic</h2>
+                <p>Page views: 5,000</p>
+            </div>
+            <div class="dashboard-item">
+                <h2>Performance</h2>
+                <p>Average load time: 1.5s</p>
+            </div>
+            <div class="dashboard-item">
+                <h2>Tests</h2>
+                <p id="testResult">test result will append here</p>
+                <button hx-get="/api/test" hx-target="#testResult">Run Test</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/htmx.org@2.0.1"></script>
+</body>
+</html>
